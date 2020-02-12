@@ -1,0 +1,21 @@
+<input 
+  #input
+  type="password" 
+  (keyup)="onKey($event)"
+  placeholder="Enter your password.">
+
+<password-checker
+  (password-valid)="onPasswordValid($event)"
+  [password]="password">
+</password-checker>
+
+<password-checker
+  [password]="password">
+    <span slot="empty">Enter your password.</span>
+    <span slot="weak">Weak password.</span>
+    <span slot="strong">Strong password.</span>
+</password-checker>
+
+<img
+  [hidden]="!showImage" 
+  src='https://cdn.memegenerator.es/imagenes/memes/full/2/12/2123896.jpg'>
